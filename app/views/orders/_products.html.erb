@@ -11,8 +11,35 @@
       </thead>
       <tbody>
         <%# <%= @all_items.inspect %> %>
-        <%= @products.inspect %>
-          <%# <%= render 'item', product: item[:product], quantity: item[:quantity].to_i %> %>
+        <%= @all_items.inspect %>
+      <tr>
+      <% @products.each do |product|  %>
+  <td>
+    <%= image_tag product.image.tiny.url %>
+  </td>
+  <td>
+    <h4><%= product.name %></h4>
+    <br>
+    <p><%= product.description %></p>
+  </td>
+  <td>
+    <%=humanized_money_with_symbol product.price %>
+  </td>
+  <td>
+
+
+    <div>
+<% quantity = @all_items.where(product_id: product.id).first.quantity%>
+<%= quantity%>
+    </div>
+
+
+  </td>
+  <td>
+    <%=humanized_money_with_symbol product.price * quantity %>
+  </td>
+</tr>
+<% end %>
         <%# end %>
       </tbody>
       <tfoot>
