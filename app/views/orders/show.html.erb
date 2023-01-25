@@ -2,11 +2,12 @@
 
   <header class="page-header">
     <h1>Order #<%= @order.id %></h1>
-    <h1>tester #<% pp @products.inspect %></h1> 
+
   </header>
 
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!
+    <h5>We will send an email confirmation at: <%= @order.email %></h5>
     <%= render 'products' %>
     </h4>
   </div>

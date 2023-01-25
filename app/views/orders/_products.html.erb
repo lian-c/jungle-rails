@@ -10,8 +10,6 @@
         </tr>
       </thead>
       <tbody>
-        <%# <%= @all_items.inspect %> %>
-        <%= @all_items.inspect %>
       <tr>
       <% @products.each do |product|  %>
   <td>
@@ -40,7 +38,7 @@
   </td>
 </tr>
 <% end %>
-        <%# end %>
+
       </tbody>
       <tfoot>
         <tr>
@@ -48,7 +46,7 @@
             TOTAL:
           </th>
           <th>
-            <%=humanized_money_with_symbol cart_subtotal_cents / 100.0 %>
+            <%=humanized_money_with_symbol  @all_items.sum(&:total_price_cents) / 100.0 %>
           </th>
         </tr>
       </tfoot>
