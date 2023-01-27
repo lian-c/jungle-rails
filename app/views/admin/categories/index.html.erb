@@ -25,9 +25,8 @@
              <% category_prod << prod.name  %>
           <% end %>
       <% end %>
-        <% category_prod.each do |name| %>
-          <li> <%= name %></li>
-          <%end%>
+<%= select_tag "product names", options_for_select(category_prod), class: "btn btn-secondary dropdown-toggle"%>
+<%# Could not get drop down menu to show up so used select instead %>
         </td>
         <td>
           <%= category.name %>
@@ -36,3 +35,5 @@
     <% end %>
   </tbody>
 </table>
+
+
