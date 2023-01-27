@@ -1,0 +1,33 @@
+<section class="admin-categories-index">
+<h1>Admin &raquo; All Categories</h1>
+
+
+
+  <div class="well">
+    <%= link_to '+ New Category', [:new, :admin, :category], class: 'btn btn-info' %>
+  </div>
+
+
+</section>
+
+ <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th >Category id</th>
+          <th>Category</th>
+
+        </tr>
+      </thead>
+      <tbody>
+      <%@categories.each do |category| %>
+  <tr>
+  <td>
+    <h4><%=category.id%></h4>
+  </td>
+  <td>
+  <%= category.name%>
+  </td>
+</tr>
+<%end%>
+   </tbody>
+    </table>
