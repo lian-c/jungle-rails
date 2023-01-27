@@ -35,6 +35,8 @@ class ApplicationController < ActionController::Base
   end
   helper_method :current_user
 
+
+  #for pages that we want only logged in users to see add ' before_action :authorize' to the controller
   def authorize
     redirect_to '/login' unless current_user
   end
