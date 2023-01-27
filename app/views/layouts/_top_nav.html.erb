@@ -63,11 +63,11 @@
                 <li class="nav-item end-0">
           <%= link_to cart_path, class: "nav-link " do %> <%= fa_icon "shopping-cart" %>
           My Cart (<%= cart.size %>) <% end %>
-        </li>
+        </li>|
         <% if current_user %>
- <span class="nav-item"> Signed in as <%= current_user.name.split(' ')[0] %></span> <%= link_to "Logout", sessions_destroy_path, class: "nav-link" %> 
+ <span class="nav-item"> Signed in as <%= current_user.name.split(' ')[0] %></span> <%= link_to "Logout", [:sessions, :destroy], class: "nav-link" %> 
 <% else %>
-  <%= link_to "Log in", sessions_new_path, class: "nav-link" %> | <%= link_to "Sign Up", users_new_path, class: "nav-link" %>
+  <%= link_to "Log in", [:sessions, :new], class: "nav-link" %>  <%= link_to "Sign Up", [:users, :new], class: "nav-link" %>
 <% end %>
 
 

@@ -16,24 +16,18 @@
     </tr>
   </thead>
   <tbody>
-    <% @categories.each do |category| %>
-      <tr>
-        <td>
-          <% category_prod = [] %>
-      <% @prod.each do |prod| %>
-        <% if prod.category_id == category.id %>
-             <% category_prod << prod.name  %>
-          <% end %>
-      <% end %>
-<p><%=category_prod.length  %> products in this category</p>
-<%= select_tag "product names", options_for_select(category_prod), class: "btn btn-secondary dropdown-toggle"%>
-<%# Could not get drop down menu to show up so used select instead %>
-        </td>
-        <td>
-          <%= category.name %>
-        </td>
-      </tr>
-    <% end %>
+<% @categories.each do |category| %>
+  <tr>
+    <td>
+      <p><%=category.products.length %> products in this category</p>
+      <%= select_tag "product names", options_for_select(category.prod_in_category), class: "btn btn-secondary dropdown-toggle" %>
+    </td>
+    <td>
+      <%= category.name %>
+    </td>
+  </tr>
+<% end %>
+
   </tbody>
 </table>
 
