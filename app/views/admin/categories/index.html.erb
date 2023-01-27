@@ -1,8 +1,6 @@
 <section class="admin-categories-index">
 <h1>Admin &raquo; All Categories</h1>
 
-
-
   <div class="well">
     <%= link_to '+ New Category', [:new, :admin, :category], class: 'btn btn-info' %>
   </div>
@@ -27,7 +25,9 @@
              <% category_prod << prod.name  %>
           <% end %>
       <% end %>
-          <%= category_prod %>
+        <% category_prod.each do |name| %>
+          <li> <%= name %></li>
+          <%end%>
         </td>
         <td>
           <%= category.name %>
