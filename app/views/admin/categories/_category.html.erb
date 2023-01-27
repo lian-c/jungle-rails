@@ -1,0 +1,9 @@
+  <tr>
+    <td>
+      <p><%=category.products.length %> products in this category</p>
+      <%= select_tag "product names", options_for_select(category.prod_in_category), class: "btn btn-secondary dropdown-toggle" %>
+    </td>
+    <td>
+      <%= category.name %>
+    </td>
+  </tr>
