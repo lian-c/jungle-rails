@@ -10,23 +10,29 @@
 
 </section>
 
- <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th >Category id</th>
-          <th>Category</th>
-        </tr>
-      </thead>
-      <tbody>
-      <%@categories.each do |category| %>
-  <tr>
-  <td>
-    <h4><%=category.id%></h4>
-  </td>
-  <td>
-  <%= category.name%>
-  </td>
-</tr>
-<%end%>
-   </tbody>
-    </table>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Products</th>
+      <th>Category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td>
+          <% category_prod = [] %>
+      <% @prod.each do |prod| %>
+        <% if prod.category_id == category.id %>
+             <% category_prod << prod.name  %>
+          <% end %>
+      <% end %>
+          <%= category_prod %>
+        </td>
+        <td>
+          <%= category.name %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
