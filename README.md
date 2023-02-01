@@ -34,3 +34,4 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - database_cleaner-active_record
 
 ## Example Screenshots
+![Home Page](https://github.com/lian-c/jungle-rails/blob/master/app/assets/images/jungle_rails_home.png)
