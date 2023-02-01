@@ -1,6 +1,8 @@
 # Jungle
 
-A mini e-commerce application built with Rails 6.1 for purposes of learning Rails by example. There are many testings written with rspec and Cypress. 
+A mini e-commerce application built with Rails 6.1 for purposes of learning Rails by example. There are many testings written with rspec and Cypress.
+
+Admin access is username: Jungle and password: book
 
 ## Setup
 
@@ -34,4 +36,17 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - database_cleaner-active_record
 
 ## Example Screenshots
+Home Page
 ![Home Page](https://github.com/lian-c/jungle-rails/blob/master/app/assets/images/jungle_rails_home.png)
+
+Clicking on a product brings you to the product's page
+![product page](https://github.com/lian-c/jungle-rails/blob/master/app/assets/images/jungle_rails_product.png)
+
+You can view your cart here when clicking on My Cart. Here you will be able to pay by card
+![Cart](https://github.com/lian-c/jungle-rails/blob/master/app/assets/images/jungle_rails_cart.png)
+
+The admin dashboard uses basic HTTP authentication. The categories are clickable and brings you to their page. 
+![Admin Dashboard](https://github.com/lian-c/jungle-rails/blob/master/app/assets/images/jungle_rails_ad.png)
+
+The admin category puts the products in a dropdown list. 
+![admin category](https://github.com/lian-c/jungle-rails/blob/master/app/assets/images/jungle_rails_admin.png)
