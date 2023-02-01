@@ -1,6 +1,6 @@
 # Jungle
 
-A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 6.1 for purposes of learning Rails by example. There are many testings written with rspec and Cypress. 
 
 ## Setup
 
@@ -29,3 +29,8 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 - Bootstrap 5
 - PostgreSQL 9.x
 - Stripe
+- rspec-rails 5.1
+- cypress-rails
+- database_cleaner-active_record
+
+## Example Screenshots
